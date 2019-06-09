@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <Title>Information Sources</Title>
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/layout.css">
+  
+</head>
+<body>
+    <!--========== PARALLAX ==========-->
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
+        <div class="parallax-content container">
+          <br>
+         </div>
+    </div>
+    <!--========== PARALLAX ==========-->
+   
+    <!-- jumbotron Welcome -->
+  <div class="container">
+      <div class="col-md-12">
+        <div class="jumbotron" style = "background-color: rgba(129, 125, 123, 0.5)">
+          <h3><b> Welcome to the City Project Information Page</b></h3>
+          <p style="font-size: 30px;"><small> Look below to find our info and data sources as well as our methodology</small></p>
+          <a class="btn btn-default btn-train" href="/" role="button"> Home </a>
+          <a class="btn btn-default btn-train" href="/info" role="button"> Project Info</a>
+          <a class="btn btn-default btn-train" href="/map" role="button"> Map</a>
+          <a class="btn btn-default btn-train" href="/scatter" role="button"> Scatter</a>
+          <a class="btn btn-default btn-train" href="/metadata" role="button"> Data</a>
+        </div>
+      </div>
+  </div>
+
+  <!-- STORY -->
+<div class="container">
+  <div class="row" style = "background-color: rgb(204, 199, 199)">
+    <div class="col-md-12">
+      <br>
+        <h4>Methodology</h4>
+        <p class="text-left">After Consulting some Experts (via interwebs) we decided to break city data collection into 3 categories.</p>
+          <ul class="text-left">1) City Infrastructure</ul>
+          <ul class="text-left">2) City Demographics</ul>
+          <ul class="text-left">3) City Tax Structure</ul>
+        <p class="text-left">Then we collected data for each category ie. commute time, education level of population, and rigor of businesses tax law. We accomplished this using a combination of web scraping and downloading publicly available CSVs. After looking through our data we decided to focus on 'Establishments' as our key indicator of city business development.</p>
+        <br>
+        <p class="text-left">The writers at census.gov define an <b>establishment</b> as: <br><br>"A single physical location where business is conducted or where services or industrial operations are performed. Data in this sector includes those establishments where manufacturing is performed."</p>
+        <hr>
+        <p class="text-left">Next we calculated a 'Business growth' index by measuring the change in a city's establishments from 2011 to 2016 and normalizing this measure over population as shown below.</p>
+        <p class="text-left"><b>Business growth</b> = </p>
+          <ul ><u>Et / Pt   -   Eo / Po</u></ul>
+          <ul >Eo / Po</ul>
+          <ul>This can be read as 'establishments over population at time t minus establishments over population initial all divided by establishments over population initial.' This calculation returns a ratio that we multiplied by 100 to return a percent change in establishments which can be seen by clicking a city on the Map page.</ul>
+          <hr>
+          <p class="text-left"><b>RESTful API and GeoJSONifying</b></p>
+          <p class="text-left">Our data route is populated via querying an SQLite database and formatting the data into a GeoJSON format. This nested dictionary format makes for easier accessing of data for the scatter plot and map.</p>
+          <hr>
+          <p class="text-left"><b>Visualizations</b></p>
+          <p class="text-left">To display our data in an interactive way we decided to create a Leaflet interactive map and a scatter plot with toggleable X variables. The Leaflet map consists of a circle for each city that is colored to indicate business growth or shrinkage and whos radius is scaled by the magnitude of this change. Our scatter plot allows the user to search for correlation between a chosen X varable and business growth percentage. The scatter plot also provides information via hovertext so that one may transition between the Scatter and Map with a city or metric in mind.</p>
+          <hr>
+          <p class="text-left"><b>Project Limitations</b></p>
+          <p class="text-left">DATA</p>
+          <li class="text-left">Only contians 383 Metro areas</li>
+          <li class="text-left">No startup survival rate data</li>
+          <li class="text-left">Tax data had to be taken in a rank form and trusted to outside source (shown below)</li>
+          <li class="text-left">Population and establishment data taken from a small window (5 years)</li>
+          <hr>
+          <p class="text-left"><b>Next Steps</b></p>
+          <li class="text-left">Collect more X variables for all 3 of the above categories</li>
+          <li class="text-left">Use machine learning to cluster variables into a multivariate analysis</li>
+          <li class="text-left">Add a page to visualze best and worst cities (top five and bottom five) for a selected x variable and have this selection populate a list and a comparison bar chart</li>
+
+
+          <br>
+
+    </div>
+  </div>
+<hr>
+</div>
+<!-- END STORY -->
+
+<!-- Sources -->
+
+  <div class="container">
+  <div class="col-md-8">
+        <div class="jumbotron" style = "background-color: rgb(204, 199, 199)">
+          <h4>Data and Info Sources</h4><hr>
+                <li class="text-left">US Census Bureau: <a href="https://www.census.gov/">https://www.census.gov/</a> </li>
+                <li class="text-left">Google Maps: <a href="https://www.google.com/maps/">https://www.google.com/maps/</a> </li><hr>
+                    <h5>What Makes A City Good For Business? </h5>
+                    <li class="text-left">Tax Foundation: <a href="https://taxfoundation.org/publications/state-business-tax-climate-index/">https://taxfoundation.org/publications/state-business-tax-climate-index/</a> </li>
+                        <li class="text-left"><a href="https://citiesspeak.org/2014/07/11/what-makes-a-city-business-friendly/">https://citiesspeak.org/2014/07/11/what-makes-a-city-business-friendly/</a></li><hr>
+                        <h5>What do Cities Need to Attract Entrepenuers?</h5>
+                        <li class="text-left">US News World Reprort Best Places to Live US, Methodology 
+                            <a href="https://realestate.usnews.com/places/methodology">https://realestate.usnews.com/places/methodology</a> 
+                          </li>   
+                        <li class="text-left"><a href="https://www.citylab.com/life/2014/02/what-cities-really-need-attract-entrepreneurs-according-entrepreneurs/8349/">
+                            https://www.citylab.com/life/2014/02/what-cities-really-need-attract-entrepreneurs-according-entrepreneurs/8349/
+                      </a></li>           
+                </li>
+            </ul>
+        </div> 
+      </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scatter Plot Page</title>
+
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Our CSS -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/home.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/layout.css">
+
+</head>
+<body>
+    
+                <!--========== PARALLAX ==========-->
+         <div class="parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
+            <div class="parallax-content container">
+            <br>
+            </div>
+        </div>
+  <!-- jumbotron Welcome -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" style = "background-color: rgba(129, 125, 123, 0.5)">
+          <h3><b> Welcome to the City Scatter!</b></h3>
+          <p style="font-size: 30px;"> Select a variable to search for correlation to Business Growth</p>
+          <a class="btn btn-default btn-train" href="/" role="button"> Home </a>
+          <a class="btn btn-default btn-train" href="/info" role="button"> Project Info</a>
+          <a class="btn btn-default btn-train" href="/map" role="button"> Map</a>
+          <a class="btn btn-default btn-train" href="/scatter" role="button"> Scatter</a>
+          <a class="btn btn-default btn-train" href="/metadata" role="button"> Data</a>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="container">   
+        <div class="row">
+                <div class= "col-md-3">
+                <div id= "menu"></div>
+                <h3>Select A Parameter</h3>
+                <select id="selDataset" onchange="getData(this.value)">                          
+                    <option value="Population">Population</option>
+                    <option value="EducationalAttainment">Educational Attainment</option>
+                    <option value="Household Income">Household Income</option>                           
+                    <option value="Commute Time">Commute Time</option>
+            <!-- <option value="Crime Rate">Crime Rate</option> -->
+                    <option value="State Tax">State Tax</option>
+                       </select>
+                   </div>
+                   <div class="col-md-9">
+                        <div id="scatter"></div>
+                        <!-- <p>chart will go here</p> -->
+                   </div>
+                   
+            </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+    <script type="text/javascript" src="../static/app.js"></script>       
+</body>    

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Cities Database Dashboard</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css">
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/home.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/layout.css">
+
+</head>
+<body>
+
+    <!--========== PARALLAX ==========-->
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
+      <div class="parallax-content container">
+        <br>
+       </div>
+    </div>
+    <!--========== PARALLAX ==========-->
+ 
+  <!-- jumbotron Welcome -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron" style = "background-color: rgba(129, 125, 123, 0.5)">
+          <h3><b> Welcome to the city Map!</b></h3>
+          <p style="font-size: 30px;"> Click on a city to see its data</p>
+          <a class="btn btn-default btn-train" href="/" role="button"> Home </a>
+          <a class="btn btn-default btn-train" href="/info" role="button"> Project Info</a>
+          <a class="btn btn-default btn-train" href="/map" role="button"> Map</a>
+          <a class="btn btn-default btn-train" href="/scatter" role="button"> Scatter</a>
+          <a class="btn btn-default btn-train" href="/metadata" role="button"> Data</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- The container that holds our map -->
+  <div class="container" id="map-id">
+  </div>
+<!-- container for all else  NONE WORKING-->
+  <!-- <div class="container">
+    <div class="row">
+        <div class="col-md-2">
+          <div class="well">
+            <h5>Select Variable - City Attribute:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h6 class="panel-title">%%%</h6>
+            </div>
+            <div id="city-metadata" class="panel-body"></div>
+          </div>
+        </div>
+      <div class="col-md-8">
+        <div id = "top-10-bar"> Insert function to populate comparison barchart</div>
+        <p>COLMD8</p>
+      </div>
+    </div> -->
+  </div>
+    
+</div>
+  <!-- D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.js"></script>
+
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+
+  <!-- API Key -->
+  <script type="text/javascript" src="../static/config.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="../static/logic.js"></script>
+</body>
+
+</html>

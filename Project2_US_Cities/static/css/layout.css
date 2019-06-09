@@ -1,0 +1,35 @@
+/* -------------------------------------------------
+  Text
+  ------------------------------------------------- */
+  .info {
+    margin-top: 100px;
+}
+
+.info h2 {
+  font-size: 95px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.info p {
+  color: white;
+  font-size: 20px;
+}
+
+/* -------------------------------------------------
+  Button
+  ------------------------------------------------- */
+.btn-train {
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.btn-train:hover {
+  background-color: white;
+  color: #1A2E95;
+}
+
+.btn {
+  font-size: 20px;
+}

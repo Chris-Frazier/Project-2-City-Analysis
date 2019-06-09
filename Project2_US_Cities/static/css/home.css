@@ -1,0 +1,43 @@
+/* -------------------------------------------------
+  Background image for Website
+  ------------------------------------------------- */
+  body {
+    background: url("../images/new_york.jpg") fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    background-size: cover;
+    background-color: rgba(10,10,10,0.6);
+    background-blend-mode: overlay;
+  }
+  
+  /* -------------------------------------------------
+    Landing Text
+    ------------------------------------------------- */
+    
+  .landing {
+    color: white;
+    margin: 0 auto;
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+  
+  .landing .h1, h1 {
+    font-size: 75px;
+    color: white;
+  }
+  
+  .landing .h2, h2 {
+    font-size: 50px;
+    color: white;
+  }
+
+  .landing .h3, h3  {
+    font-size: 25px;
+    color: white;
+  }
+  
+  
